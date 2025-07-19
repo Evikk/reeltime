@@ -1,0 +1,25 @@
+@layer components {
+  .loading-spinner {
+    @apply animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 dark:border-blue-400;
+  }
+
+  .loading-container {
+    @apply flex justify-center items-center py-12;
+  }
+
+  .error-container {
+    @apply text-center py-12;
+  }
+
+  .error-card {
+    @apply bg-red-50 border border-red-200 rounded-lg p-6 max-w-md mx-auto;
+  }
+
+  .empty-state {
+    @apply text-center py-12;
+  }
+
+  .empty-state-content {
+    @apply max-w-md mx-auto;
+  }
+}
