@@ -61,7 +61,7 @@ async function switchCategory(category: CategoryKey) {
           <div class="md:hidden">
             <select
               :value="currentCategory"
-              @change="switchCategory(($event.target as HTMLSelectElement).value)"
+              @change="switchCategory(($event.target as HTMLSelectElement).value as CategoryKey)"
               class="input-field"
             >
               <option v-for="category in categories" :key="category.key" :value="category.key">

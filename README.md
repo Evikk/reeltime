@@ -70,7 +70,7 @@ A modern, responsive movie discovery application built with Vue 3 and TypeScript
 1. **Clone the repository**
 
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/Evikk/reeltime
    cd reeltime
    ```
 
@@ -95,45 +95,6 @@ A modern, responsive movie discovery application built with Vue 3 and TypeScript
 
 5. **Open your browser**
    Navigate to `http://localhost:5173` to see the application.
-
-### Getting a TMDb API Key
-
-1. Sign up for a free account at [TMDb](https://www.themoviedb.org/signup)
-2. Go to your [API settings](https://www.themoviedb.org/settings/api)
-3. Request an API key (choose "Developer" for personal use)
-4. Copy your API key and add it to your `.env` file
-
-## 📝 Available Scripts
-
-### Development
-
-```bash
-npm run dev          # Start development server
-npm run preview      # Preview production build locally
-```
-
-### Building
-
-```bash
-npm run build        # Build for production
-npm run build-only   # Build without type checking
-npm run type-check   # Run TypeScript compiler
-```
-
-### Testing
-
-```bash
-npm run test         # Run tests in watch mode
-npm run test:run     # Run tests once
-npm run test:ui      # Run tests with UI
-npm run test:coverage # Run tests with coverage report
-```
-
-### Code Quality
-
-```bash
-npm run lint         # Lint and fix code issues
-```
 
 ## 📁 Project Structure
 
@@ -161,32 +122,6 @@ src/
 └── tests/              # Test files and utilities
 ```
 
-## 🎛️ Configuration
-
-### Environment Variables
-
-| Variable            | Description       | Required |
-| ------------------- | ----------------- | -------- |
-| `VITE_TMDB_API_KEY` | Your TMDb API key | Yes      |
-
-### Tailwind Configuration
-
-The application uses a custom Tailwind configuration with:
-
-- Dark mode support (`class` strategy)
-- Custom color palette with dark theme colors
-- Poppins and Inter font families
-- Responsive breakpoints
-
-### TypeScript Configuration
-
-Multiple TypeScript configurations for different environments:
-
-- `tsconfig.json` - Base configuration
-- `tsconfig.app.json` - Application code
-- `tsconfig.node.json` - Node.js environment
-- `tsconfig.vitest.json` - Testing environment
-
 ## 🧪 Testing
 
 The project includes comprehensive testing setup with:
@@ -202,126 +137,12 @@ The project includes comprehensive testing setup with:
 # Run all tests
 npm run test
 
-# Run tests with coverage
-npm run test:coverage
-
-# Run tests in UI mode
-npm run test:ui
 ```
-
-## 🎨 Theming
-
-ReelTime supports both light and dark themes with:
-
-- **System preference detection** on first visit
-- **Persistent theme selection** stored in localStorage
-- **Smooth transitions** between themes
-- **Consistent color palette** across all components
-
-### Theme Colors
-
-The application uses a carefully crafted color system:
-
-- **Primary colors**: Blue tones for accents and interactive elements
-- **Dark mode palette**: Custom dark grays for better readability
-- **Semantic colors**: Success, warning, and error states
-
-## 🔧 API Integration
-
-### TMDb Service
-
-The `TMDbService` class provides a clean interface to The Movie Database API:
-
-```typescript
-// Get popular movies
-const movies = await tmdbService.getPopularMovies(1);
-
-// Search movies
-const searchResults = await tmdbService.searchMovies("Inception");
-
-// Get movie details
-const movieDetails = await tmdbService.getMovieDetails(123);
-
-// Discover movies with filters
-const filteredMovies = await tmdbService.discoverMovies({
-  genre: "28", // Action
-  year: 2023,
-  sort_by: "vote_average.desc",
-});
-```
-
-### Error Handling
-
-- **Network errors**: Graceful handling with retry mechanisms
-- **API errors**: Proper error messages from TMDb responses
-- **Loading states**: Consistent loading indicators across the app
-- **Fallback data**: Default values for missing or invalid data
-
-## 🚀 Deployment
-
-### Build for Production
-
-```bash
-npm run build
-```
-
-This creates an optimized build in the `dist/` directory.
-
-### Deployment Options
-
-The application can be deployed to:
-
-- **Vercel**: Zero-config deployment
-- **Netlify**: Static site hosting
-- **GitHub Pages**: Free hosting for public repositories
-- **AWS S3**: Static website hosting
-- **Any static file server**
-
-### Environment Variables in Production
-
-Make sure to set your `VITE_TMDB_API_KEY` in your deployment platform's environment settings.
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-### Development Guidelines
-
-- Use TypeScript for all new code
-- Follow Vue 3 Composition API patterns
-- Write tests for new components and features
-- Follow the existing code style and conventions
-- Update documentation for significant changes
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-## 🙏 Acknowledgments
-
-- **The Movie Database (TMDb)** for providing the movie data API
-- **Vue.js team** for the amazing framework
-- **Tailwind CSS** for the utility-first styling approach
-- **Lucide** for the beautiful icon set
-
-## 📞 Support
-
-If you have any questions or issues, please:
-
-1. Check the [documentation](#) above
-2. Search existing [GitHub issues](https://github.com/your-username/reeltime/issues)
-3. Create a new issue if needed
 
 ---
 
 <div align="center">
 
 **Built with ❤️ using Vue 3 and TypeScript**
-
-[Live Demo](https://your-demo-url.com) • [Documentation](https://your-docs-url.com) • [Report Bug](https://github.com/your-username/reeltime/issues)
 
 </div>

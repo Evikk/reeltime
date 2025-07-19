@@ -77,6 +77,7 @@ import { useDebounceFn } from "@vueuse/core";
 import FilterTags from "@/components/MoviesFilters/FilterTags.vue";
 import DropdownInput from "@/components/MoviesFilters/DropdownInput.vue";
 import RangeInput from "@/components/MoviesFilters/RangeInput.vue";
+import type { SearchParams } from "@/types/movie";
 
 const moviesStore = useMoviesStore();
 
@@ -85,7 +86,7 @@ const showFilters = ref(false);
 const selectedGenre = ref("");
 const selectedYear = ref("");
 const minRating = ref(0);
-const sortBy = ref("popularity.desc");
+const sortBy = ref<NonNullable<SearchParams["sort_by"]>>("popularity.desc");
 const isLoading = ref(false);
 
 const genres = computed(() => moviesStore.genres);
