@@ -2,7 +2,7 @@
 
 A modern, responsive movie discovery application built with Vue 3 and TypeScript. Explore movies from The Movie Database (TMDb) with advanced filtering, detailed information, and a beautiful user interface.
 
-![ReelTime Demo](https://reeltime-7of0xo0m5-evikks-projects.vercel.app/)
+![ReelTime Demo](https://reeltime-sigma.vercel.app/)
 
 ## ✨ Features
 
